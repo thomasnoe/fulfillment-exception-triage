@@ -245,10 +245,10 @@ Sections 1–9 stay stable. Sections 10–12 are the working surface: check boxe
 - [x] Check: replay the same webhook 50 times in a script, assert order count does not move
 
 ### Phase 4: rules engine
-- [ ] Pure functions, input is order state plus rule config, output is exception or null
-- [ ] Config read from `exception_rule_versions.config`, nothing hardcoded
-- [ ] Vitest coverage on all six rules including attribution branches for `allocation_failure`
-- [ ] Check: tests pass, and changing a rule config in the DB changes behavior with no code edit
+- [x] Pure functions, input is order state plus rule config, output is exception or null
+- [x] Config read from `exception_rule_versions.config`, nothing hardcoded
+- [x] Vitest coverage on all six rules including attribution branches for `allocation_failure`
+- [x] Check: tests pass, and changing a rule config in the DB changes behavior with no code edit
 
 ### Phase 5: workers
 - [ ] pg-boss installed into the same database
