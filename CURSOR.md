@@ -2,7 +2,7 @@
 
 Multi-tenant ops console. An agency manages several ecommerce client stores. The app ingests orders, auto-flags fulfillment exceptions against a versioned rules engine, and gives ops staff a triage queue to assign, resolve, and audit.
 
-This file is persistent context for Claude Code. Read it before every task. If a decision here conflicts with something suggested mid-session, this file wins unless explicitly updated.
+This file is persistent context for Cursor. Read it before every task. If a decision here conflicts with something suggested mid-session, this file wins unless explicitly updated. Claude Code uses `CLAUDE.md` with the same substance.
 
 ---
 
@@ -300,7 +300,7 @@ The README is evaluated as heavily as the code. It must contain:
 
 ---
 
-## 12. Guardrails for Claude Code
+## 12. Guardrails for Cursor
 
 - Do not hardcode exception logic. Rules live in the database as versioned config rows
 - Do not introduce a global cutoff constant. Cutoffs are per warehouse, carrier, service, and day, in the warehouse timezone

@@ -1,0 +1,6 @@
+---
+description: Load Fulfillment Exception Triage project agent context
+alwaysApply: true
+---
+
+Read `CURSOR.md` at the repo root before every task. It is the project source of truth for stack, domain, schema, phases, and guardrails. If a decision there conflicts with something suggested mid-session, `CURSOR.md` wins unless explicitly updated.
