@@ -234,10 +234,10 @@ Sections 1–9 stay stable. Sections 10–12 are the working surface: check boxe
 - [x] Check: a raw query without the session variable set returns zero rows
 
 ### Phase 2: seed
-- [ ] Two agencies, four stores, two warehouses in different timezones
-- [ ] 60 days of orders with realistic status distribution, most terminal
-- [ ] Deliberate planted failures: a sync lag oversell, a count variance oversell, three orders packed with no tracking approaching cutoff, one return sitting 11 days undispositioned
-- [ ] Check: queue has between 20 and 40 open exceptions, not 500
+- [x] Two agencies, four stores, two warehouses in different timezones
+- [x] 60 days of orders with realistic status distribution, most terminal
+- [x] Deliberate planted failures: a sync lag oversell, a count variance oversell, three orders packed with no tracking approaching cutoff, one return sitting 11 days undispositioned
+- [x] Check: queue has between 20 and 40 open exceptions, not 500
 
 ### Phase 3: ingestion
 - [ ] Webhook route with HMAC verification
