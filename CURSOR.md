@@ -222,9 +222,9 @@ Work top to bottom. Do not start a phase before the one above it passes its chec
 Sections 1–9 stay stable. Sections 10–12 are the working surface: check boxes off as you go. Section 12 exists to stop the agent from quietly wrecking the demo (hardcoding rules, a global cutoff constant, mutating the audit log).
 
 ### Phase 0: environment
-- [ ] Postgres host: Docker Compose, not Neon. RLS and pg-boss match production; avoid live interviewer cold-start timeouts. Docker is preferred because RLS and pg-boss behave identically to production and there is no network flake during a demo
-- [ ] `.env.example` committed, `.env.local` gitignored
-- [ ] `drizzle.config.ts` wired, `npm run db:push` and `npm run db:studio` scripts added
+- [ ] Postgres host: Neon, not Docker Compose. Local and dev use a real cloud Postgres, not a local container. RLS and pg-boss run in that same database
+- [x] `.env.example` committed, `.env.local` gitignored
+- [x] `drizzle.config.ts` wired, `npm run db:push` and `npm run db:studio` scripts added
 - [ ] Check: `npm run dev` serves, `db:studio` connects
 
 ### Phase 1: schema and isolation
