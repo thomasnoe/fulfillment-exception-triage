@@ -240,9 +240,9 @@ Sections 1–9 stay stable. Sections 10–12 are the working surface: check boxe
 - [x] Check: queue has between 20 and 40 open exceptions, not 500
 
 ### Phase 3: ingestion
-- [ ] Webhook route with HMAC verification
-- [ ] Unique constraint on `(store_id, external_id)`, insert into `webhook_events` before processing
-- [ ] Check: replay the same webhook 50 times in a script, assert order count does not move
+- [x] Webhook route with HMAC verification
+- [x] Unique constraint on `(store_id, external_id)`, insert into `webhook_events` before processing
+- [x] Check: replay the same webhook 50 times in a script, assert order count does not move
 
 ### Phase 4: rules engine
 - [ ] Pure functions, input is order state plus rule config, output is exception or null

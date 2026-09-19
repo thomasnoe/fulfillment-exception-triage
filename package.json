@@ -12,7 +12,8 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:rls-check": "tsx scripts/rls-check.ts",
-    "db:seed": "tsx scripts/seed.ts"
+    "db:seed": "tsx scripts/seed.ts",
+    "ingest:replay": "tsx scripts/replay-webhook.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",
