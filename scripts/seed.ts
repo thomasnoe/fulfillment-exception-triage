@@ -74,6 +74,7 @@ const RULE_CONFIG: Record<RuleKey, Record<string, unknown>> = {
       PACKED: 120,
       MANIFESTED: 90,
     },
+    escalateToCriticalMinutesBeforeCutoff: 60,
   },
   return_pending_disposition: { pendingHours: 72 },
 };

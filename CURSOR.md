@@ -251,10 +251,10 @@ Sections 1–9 stay stable. Sections 10–12 are the working surface: check boxe
 - [x] Check: tests pass, and changing a rule config in the DB changes behavior with no code edit
 
 ### Phase 5: workers
-- [ ] pg-boss installed into the same database
-- [ ] Aging sweep job, runs every minute, evaluates non-terminal orders
-- [ ] Cutoff clock job, escalates `stuck_in_status` severity as cutoffs approach
-- [ ] Check: advance a seeded order's clock, watch severity escalate without a restart
+- [x] pg-boss installed into the same database
+- [x] Aging sweep job, runs every minute, evaluates non-terminal orders
+- [x] Cutoff clock job, escalates `stuck_in_status` severity as cutoffs approach
+- [x] Check: advance a seeded order's clock, watch severity escalate without a restart
 
 ### Phase 6: queue screen
 - [ ] Server Component table, filters in searchParams so views are shareable by URL

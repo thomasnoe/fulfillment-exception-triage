@@ -62,7 +62,9 @@ export const ruleConfigByKey = {
 } as const;
 
 export function parseRuleConfig<K extends RuleKey>(key: K, config: unknown): z.infer<(typeof ruleConfigByKey)[K]> {
-  return ruleConfigByKey[key].parse(config);
+  const schema = ruleConfigByKey[key];
+  const parsed: unknown = schema.parse(config);
+  return parsed as z.infer<(typeof ruleConfigByKey)[K]>;
 }
 
 export function isRuleKey(value: string): value is RuleKey {
