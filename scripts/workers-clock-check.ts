@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { loadEnvFile } from "node:process";
 import { createSql } from "../src/db/sql";
+import { startWorkers } from "../src/workers/start";
 import { calendarDateInTimeZone, wallTimeOnZonedDate } from "../src/workers/warehouse-clock";
 import { runCutoffClock } from "../src/workers/sweep";
 
@@ -131,6 +132,9 @@ async function main(): Promise<void> {
     if (afterLate !== "critical") {
       throw new Error(`expected critical near cutoff, got ${afterLate ?? "missing"}`);
     }
+
+    const { stop } = await startWorkers(sql);
+    await stop();
 
     console.log(
       `Phase 5 check passed: SEED-PACKED-1 stuck_in_status ${afterMorning} → ${afterLate} against ${packed.timezone} cutoff ${packed.cutoff_time} with no worker restart.`,
