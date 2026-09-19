@@ -346,7 +346,7 @@ export const exceptionRules = pgTable(
       .references(() => agencies.id),
     key: text("key").notNull(),
     enabled: boolean("enabled").notNull().default(true),
-    currentVersionId: uuid("current_version_id").references(() => exceptionRuleVersions.id),
+    currentVersionId: uuid("current_version_id"),
     ...timestamps,
   },
   (table) => [
