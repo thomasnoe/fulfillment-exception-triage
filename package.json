@@ -15,7 +15,9 @@
     "db:seed": "tsx scripts/seed.ts",
     "ingest:replay": "tsx scripts/replay-webhook.ts",
     "test": "vitest run",
-    "rules:config-check": "tsx scripts/rules-config-check.ts"
+    "rules:config-check": "tsx scripts/rules-config-check.ts",
+    "workers": "tsx scripts/workers.ts",
+    "workers:clock-check": "tsx scripts/workers-clock-check.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",
