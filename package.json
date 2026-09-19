@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:rls-check": "tsx scripts/rls-check.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",

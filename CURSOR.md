@@ -222,16 +222,16 @@ Work top to bottom. Do not start a phase before the one above it passes its chec
 Sections 1–9 stay stable. Sections 10–12 are the working surface: check boxes off as you go. Section 12 exists to stop the agent from quietly wrecking the demo (hardcoding rules, a global cutoff constant, mutating the audit log).
 
 ### Phase 0: environment
-- [ ] Postgres host: Neon, not Docker Compose. Local and dev use a real cloud Postgres, not a local container. RLS and pg-boss run in that same database
+- [x] Postgres host: Neon, not Docker Compose. Local and dev use a real cloud Postgres, not a local container. RLS and pg-boss run in that same database
 - [x] `.env.example` committed, `.env.local` gitignored
 - [x] `drizzle.config.ts` wired, `npm run db:push` and `npm run db:studio` scripts added
-- [ ] Check: `npm run dev` serves, `db:studio` connects
+- [x] Check: `npm run dev` serves, `db:studio` connects
 
 ### Phase 1: schema and isolation
-- [ ] Tables per section 7, migrations generated and committed
-- [ ] RLS policies on every tenant table
-- [ ] `audit_log` UPDATE and DELETE revoked
-- [ ] Check: a raw query without the session variable set returns zero rows
+- [x] Tables per section 7, migrations generated and committed
+- [x] RLS policies on every tenant table
+- [x] `audit_log` UPDATE and DELETE revoked
+- [x] Check: a raw query without the session variable set returns zero rows
 
 ### Phase 2: seed
 - [ ] Two agencies, four stores, two warehouses in different timezones
