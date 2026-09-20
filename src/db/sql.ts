@@ -5,6 +5,16 @@ export function createSql(): postgres.Sql {
   return postgres(requireDatabaseUrl(), { max: 1 });
 }
 
+/** Lazy so `next build` typecheck does not open a Neon connection. */
+let appSql: postgres.Sql | undefined;
+
+export function getAppSql(): postgres.Sql {
+  if (appSql === undefined) {
+    appSql = postgres(requireDatabaseUrl(), { max: 4 });
+  }
+  return appSql;
+}
+
 export function isUniqueViolation(error: unknown): boolean {
   if (typeof error !== "object" || error === null) {
     return false;
